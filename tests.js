@@ -3,22 +3,72 @@
 var chai = require('chai');
 var assert = chai.assert;
 
-var lib = require('./lib/library.js');
+var lib = require('./lib/sum_of_primes.js');
 
-describe("Test that constants are computed properly", function() {
-  it("should give 10, 4 for constants 2, 5 as a and n respectively", function() {
+describe("Verify that the sum of prime is accurate ", function() {
+  
+  it("Should return 129 for sum_of_primes(30)", function() {
     assert(
-      lib.compareCoefficients(lib.quadraticDerivative(2, 5), { a: 10, n: 4 })
+      lib.sum_of_primes(30) === 129
     );
   });
-  it("should give 2, 1 for constants 1, 2 as a and n respectively", function() {
+  
+  it("Should return 0 for sum_of_primes(0)", function() {
     assert(
-      lib.compareCoefficients(lib.quadraticDerivative(1, 2), { a: 2, n: 1 })
+      lib.sum_of_primes(0) === 0
     );
   });
-  it("should give 8, 1 for constants 4, 2 as a and n respectively", function() {
+
+    it("Should return 5 for sum_of_primes(3)", function() {
     assert(
-      lib.compareCoefficients(lib.quadraticDerivative(4, 2), { a: 8, n: 1 })
+      lib.sum_of_primes(3) === 5
     );
   });
+
+    it("Should return 17 for sum_of_primes(9)", function() {
+    assert(
+      lib.sum_of_primes(9) === 17
+    );
+  });
+
+    it("Should return 28 for sum_of_primes(11)", function() {
+    assert(
+      lib.sum_of_primes(11) === 28
+    );
+  });
+
+    it("Should return 0 for negative inputs", function() {
+    assert(
+      lib.sum_of_primes(-7) === 0
+    );
+  });
+
+    it("Should return 0 for string inputs", function() {
+    assert(
+      lib.sum_of_primes("") === 0
+    );
+  });
+
+
+  
+    it("Should return 0 for string inputs", function() {
+    assert(
+      lib.sum_of_primes("") === 0
+    );
+  });
+
+  
+    it("Should return 0 for sum_of_primes(1)", function() {
+    assert(
+      lib.sum_of_primes(1) === 0
+    );
+  });
+
+  
+    it("Should return 0 for sum_of_primes([5,22])", function() {
+    assert(
+      lib.sum_of_primes([5, 22]) === 0
+    );
+  });
+
 });
