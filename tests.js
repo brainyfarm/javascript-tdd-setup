@@ -53,8 +53,12 @@ describe("Verify that the sum of prime is accurate ", function() {
   
     it("Should return 0 for string inputs", function() {
     assert(
-      lib.sum_of_primes("") === 0
+      lib.sum_of_primes("777") === 0
     );
+
+
+
+
   });
 
   
