@@ -9,7 +9,7 @@ describe("Verify that the sum of prime is accurate ", function () {
 
   it("Should return 129 for sum_of_primes(30)", function () {
     assert(
-      lib.sum_of_primes(30) === 129
+      lib.sum_of_primes(30), 129
     );
   });
 
@@ -21,19 +21,19 @@ describe("Verify that the sum of prime is accurate ", function () {
 
   it("Should return 5 for sum_of_primes(3)", function () {
     assert(
-      lib.sum_of_primes(3) === 5
+      lib.sum_of_primes(3), 5
     );
   });
 
   it("Should return 17 for sum_of_primes(9)", function () {
     assert(
-      lib.sum_of_primes(9) === 17
+      lib.sum_of_primes(9), 17
     );
   });
 
   it("Should return 28 for sum_of_primes(11)", function () {
     assert(
-      lib.sum_of_primes(11) === 28
+      lib.sum_of_primes(11), 28
     );
   });
 
