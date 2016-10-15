@@ -5,7 +5,7 @@ var assert = chai.assert;
 
 var lib = require('./lib/sum_of_primes.js');
 
-describe("Verify that the sum of prime is accurate ", function () {
+describe("Verify that the sum of primes are accurate ", function () {
 
   it("Should return 129 for sum_of_primes(30)", function () {
     assert(
@@ -48,7 +48,6 @@ describe("Verify that the sum of prime is accurate ", function () {
       lib.sum_of_primes("") === 0
     );
   });
-
 
 
   it("Should return 0 for string inputs", function () {
